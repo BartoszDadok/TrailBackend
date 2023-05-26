@@ -1,7 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-import { Schema, model } from "mongoose";
-import { Data } from "../schemas/graphQl-backend";
-
+const mongoose_1 = require("mongoose");
 const trailSchema = new mongoose.Schema({
     id: {
         type: Number,
@@ -17,7 +17,6 @@ const trailSchema = new mongoose.Schema({
         type: Number,
     },
 });
-
 const clientsSchema = new mongoose.Schema({
     id: {
         type: Number,
@@ -48,11 +47,10 @@ const clientsSchema = new mongoose.Schema({
         type: [trailSchema],
     },
 });
-
 const dataToChartSchema = new mongoose.Schema({
     name: [{
-        type: String,
-    }],
+            type: String,
+        }],
     users: {
         type: Number,
     },
@@ -80,7 +78,6 @@ const timePeriodsSchema = new mongoose.Schema({
         type: [dataToChartSchema],
     },
 });
-
 const deviceSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -120,7 +117,6 @@ const weekDaysSchema = new mongoose.Schema({
         type: [hoursSchema],
     },
 });
-
 const regionSchema = new mongoose.Schema({
     v: {
         type: String,
@@ -139,7 +135,6 @@ const sourceSchema = new mongoose.Schema({
     users: {
         type: Number,
     },
-
 });
 const usersTableSchema = new mongoose.Schema({
     yesterday: {
@@ -171,9 +166,8 @@ const bestPagesSchema = new mongoose.Schema({
     users: {
         type: Number,
     },
-
 });
-const userSchema = new Schema({
+const userSchema = new mongoose_1.Schema({
     id: {
         type: String,
     },
@@ -216,9 +210,5 @@ const userSchema = new Schema({
         type: [bestPagesSchema],
     },
 });
-
-
-const Users = model<Data>("User", userSchema);
-
-
+const Users = (0, mongoose_1.model)("User", userSchema);
 module.exports = { Users };

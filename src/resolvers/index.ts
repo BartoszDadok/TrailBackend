@@ -1,6 +1,6 @@
-import { Resolvers } from "../../generated/graphQl-backend";
+import { Resolvers } from "../schemas/graphQl-backend";
 import { Model } from "mongoose";
-import { Data } from "../../generated/graphQl-backend";
+import { Data } from "../schemas/graphQl-backend"
 
 
 interface ApolloContext {
