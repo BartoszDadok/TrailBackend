@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "build": "tsc -p . && ncp src/schemas dist/schemas",
+    "build": "tsc -p .",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "author": "",
