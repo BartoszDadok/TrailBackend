@@ -1,6 +1,6 @@
 node_modules
 .env
 fakeData.json
-generetedData
+src/generetedData
 .idea
 .vercel

@@ -5,6 +5,7 @@ const { resolvers } = require("./resolvers");
 const models = require("./models");
 const fs = require('fs');
 connectDatabase();
+
 const server = new ApolloServer({
     typeDefs,
     resolvers,
